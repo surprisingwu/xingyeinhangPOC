@@ -1,0 +1,344 @@
+html,body{
+	height: 100%;
+	width: 100%;
+}
+.mainBox{
+	width:100%;
+	height: 100%;
+}
+.contentBox{
+	height:100%;
+	width:100%;
+	position:absolute;
+	overflow: hidden;
+	position:relative
+}
+.contentBox ul{
+	width:300%;
+	display: flex;
+	position:absolute;
+	left:0;
+	top:0;
+	transition: all 0.5s ease;
+	height: 100%;
+}
+.contentBox ul li{
+	width:100%;
+	height: 100%;
+	position: relative;
+}
+.contentBox li{
+  text-align: center;
+   color: #FFFFFF; 
+    }
+    .firstBox{
+    	height: 100%;
+    	width: 100%;
+    }
+nav {
+    height: 1.173333rem;
+    background-color: #fff;
+    text-align: center;
+    color: #004287;
+    border-bottom: 0.026667rem solid #004287;
+    border-collapse: collapse;
+}
+.register-wraper{
+	width: 100%;
+	height: 1.173333rem;
+	position: relative;
+	z-index: 99;
+}
+.carama-wraper {
+    height: 100%;
+    width: 100%;
+}
+nav>span{
+	font-size: 17px;
+	line-height: 1.173333rem;
+	font-weight: 600;
+}
+
+.turnBack{
+ position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.066667rem;
+    height: 100%;
+    text-align: center;
+    line-height: 1.173333rem;
+       background: url(../img/shapeturnback.png) no-repeat center;
+    background-size: 0.32rem;
+}
+/*.turnBack::before{
+	content: "";
+    width: 0.32rem;
+    height: 0.32rem;
+    border-left: 0.053333rem solid #004287;
+    border-bottom: 0.053333rem solid #004287;
+    -webkit-transform:rotate(45deg);
+    transform: rotate(45deg);
+    display: inline-block;
+}*/
+.register-container,.import-friend-content,.carama-content{
+	width: 100%;
+	padding-left: 0.4rem;
+	background-color: #fff;
+}
+.public-content{
+	position: relative;
+	height: 1.333333rem;
+	border-bottom: 0.026667rem solid #ccc;
+	line-height: 1.333333rem;
+	box-sizing: border-box;
+}
+.public-content>label{
+	display: inline-block;
+	float: left;
+	color: #666;
+}
+input#birthTime {
+    background-color: #fff;
+    text-align: left;
+    color: #666;
+}
+input::-webkit-input-placeholder{
+	color: #CCC;
+}
+.public-content>input{
+	border:none;
+	outline: none;
+
+}
+.public-content-left{
+	font-size: 15px;
+}
+.public-content:last-child{
+	border-bottom: none;
+}
+.public-content-right{
+	font-size: 15px;
+	float: right;
+	height: 1.066667rem;
+		width: 70%;
+	margin-top: 0.133333rem;
+}
+.btn-wraper{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+}
+span#birthTime {
+    display: inline-block;
+    color: #CCC;
+    text-align: left;
+}
+.btn-wraper .next-button,.next-button {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.44rem;
+    height: 1.44rem;
+    color: #fff;
+    border: 0.026667rem solid #004287;
+    background-color: #004287;
+}
+button#completeBtn {
+    border-radius: 0.133333rem;
+}
+.complete-btn {
+    margin-top: 1.333333rem;
+    padding-left: 0.666667rem;
+    padding-right: 0.666667rem;
+}
+.carama-upload-btn {
+    width: 3.946667rem;
+    height: 3.946667rem;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    background: url(../img/caramahehe.png) no-repeat center center;
+    background-size: 100% 100%;
+    left: 50%;
+    top: 40%;
+    margin-left: -1.973333rem;
+    margin-top: -1.973333rem;
+}
+.carama-uploadUp .carama-title{
+	display: block;
+	color: black;
+	text-align: left;
+	font-size: 15px;
+}
+.carama-uploadUp{
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+input[type="file"] {
+    position: absolute;
+    height: 3.946667rem;
+    display: block;
+    width: 3.946667rem;
+    left: 50%;
+    top: 40%;
+    margin-left: -1.973333rem;
+    margin-top: -1.973333rem;
+    opacity: 0;
+    z-index: 5;
+    text-indent: -9999rem;
+}
+input.img-upload-btn {
+    position: absolute;
+    height: 0.8rem;
+    width: 2.4rem;
+    bottom: 2.133333rem;
+    left: 50%;
+    margin-left: -1.2rem;
+    border: 0.026667rem solid rgb(0,155,245);
+    background: rgb(0,155,245);
+    color: #fff;
+    border-radius: 0.106667rem;
+}
+input.img-upload-btn:hover{
+	cursor: pointer;
+}
+.totast,.imgtotast{
+	position: absolute;
+	top: 0;
+	background-color: rgba(94,95,95,.6);
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+}
+.totast-container{
+	width: 5.333333rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	background-color: #FAFAFC;
+	z-index: 5;
+	font-size: 15px;
+	text-align: center;
+	border-radius: 0.133333rem;
+}
+.totast-container-left,.totast-container-right{
+	display: inline-block;
+	height: 0.986667rem;
+	width: 100%;
+	line-height: 0.986667rem;
+	margin-top: 0.8rem;
+}
+.totast-container-left{
+float: left;
+color:#444;
+border-top: 0.026667rem solid rgb(234,234,235);
+}
+.totast-container-right{
+	float: right;
+	color: #0BB20C;
+	border-top: 0.026667rem solid rgb(234,234,235);
+}
+p.totast-container-title{
+	margin-top: 0.8rem;
+}
+.peopleSelect{
+	position: absolute;
+	width: 1.066667rem;
+	height: 100%;
+	right: 0;
+	top: 0;
+}
+.peopleSelect::before{
+	content: "";
+	display: inline-block;
+	 border-top: 0.04rem solid rgb(0,155,245);
+    border-right: 0.04rem solid rgb(0,155,245);
+        width: 0.32rem;
+    height: 0.32rem;
+    -webkit-transform:rotate(45deg);
+    transform: rotate(45deg);
+}
+.selectPeoplePage{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+.um-check-group {
+	position: relative;
+    overflow: hidden;
+    color: #00a1ea;
+    margin: 0;
+
+}
+
+.um-check-group-item{
+    border-bottom: 0.026667rem solid #ccc;
+    font-size: 15px;
+}
+.um-check-group-item:first-child, .um-check-group-item:last-child{
+        -webkit-border-image: none;
+    border-image: none;
+    border-width: 0px 0 0 0;
+    border-bottom: 0.026667rem solid #ccc;
+}
+
+.carama-content{
+	padding-left: 0;
+}
+.imageUpLoad {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+    z-index: 99;
+}
+.imageUpLoadWraper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5.333333rem;
+    width: 100%;
+    background: #fff;
+}
+.imageUpLoadWraperItemWraper {
+    height: 2.666667rem;
+    width: 100%;
+    line-height: 2.666667rem;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 0.026667rem solid blue;
+}
+input#file {
+    display: block;
+    width: 100%;
+    height: 2.64rem;
+    position: absolute;
+    /* left: 50px; */
+    text-indent: -9999rem;
+    opacity: 0;
+    z-index: 99;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

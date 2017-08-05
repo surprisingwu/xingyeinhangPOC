@@ -1,0 +1,33 @@
+#title{
+	height: auto;
+	width:100%;
+	line-height:*;
+	padding:5px;
+	font-size:17px;
+	text-align:center; 
+}
+#author{
+	height: 50px;;
+	width:100%;
+	line-height:*;
+	padding:5px;
+	font-size:15px;
+	color:#007AFF;
+}
+.um-header-light{
+	text-align: center;
+}
+#data{
+	height: 50px;
+	width:100%;
+	line-height:*;
+	padding:5px;
+}
+#content{
+	height: 100%;
+	width:100%;
+	text-align:center; 
+	margin:0 auto;
+	padding:15px;
+	box-sizing: border-box;
+}

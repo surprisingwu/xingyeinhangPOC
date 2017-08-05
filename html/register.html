@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/iuapmobile.um.css">
+    <link rel="stylesheet" href="../css/font-icons.css">
+    <link rel="stylesheet" href="../js/LCalendar/css/LCalendar.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/summer.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/Frameworks/iuapmobile.frameworks.ui.js"></script>
+    <script src="../js/adaptive.js"></script>
+    <script src="../js/lrz.bundle.js"></script>
+     <script src="../js/LCalendar/js/LCalendar.js"></script>
+    <script src="../js/appsettings.js"></script>
+    <script src='../js/register.js'></script>
+
+</head>
+<body>
+<div class="mainBox">
+    <div class="firstBox">
+        <div class="contentBox">
+            <ul class="list-wraper">
+                <li class="everyPage">
+                    <div class="register-wraper">
+                        <nav><i class="turnBack" id="turnBackBtn1"></i><span class="register-title">注册</span></nav>
+                    </div>
+                    <div class="register-container">
+                        <div class="public-content register-name">
+                            <label for="username" class="public-content-left">姓名</label><input type="text"
+                                                                                               id="username"
+                                                                                               placeholder="请输入您的真实姓名"
+                                                                                               class="public-content-right public-hide">
+                        </div>
+                        <div class="public-content register-name">
+                            <label for="birthTime" class="public-content-left">出生日期</label><input
+                                                                                                  id="birthTime"                                                                                                
+                                                                              
+                                                                                                  class="public-content-right public-hide" placeholder="请选择您的出生日期" readonly>
+>
+                        </div>
+                        <div class="public-content register-name">
+                            <label for="registerMail" class="public-content-left">邮箱</label><input type="email"
+                                                                                                   id="registerMail"
+                                                                                                   placeholder="请输入您的邮箱"
+                                                                                                   class="public-content-right public-hide">
+                        </div>
+                        <div class="public-content register-name">
+                            <label for="userconut" class="public-content-left">帐号</label><input type="text"
+                                                                                                id="userconut"
+                                                                                                placeholder="请输入帐号，有6-20字母组成"
+                                                                                                class="public-content-right public-hide">
+                        </div>
+                        <div class="public-content register-name">
+                            <label for="userpwd" class="public-content-left">密码</label><input type="text" id="userpwd"
+                                                                                              placeholder="请输入密码"
+                                                                                              class="public-content-right public-hide">
+                        </div>
+                 
+
+                    </div>
+                    <div class="btn-wraper">
+                        <button class="next-button" id="btn1">下一步</button>
+                    </div>
+
+                </li>
+                <li class="everyPage">
+                    <div class="carama-wraper">
+                        <div class="register-wraper">
+                            <nav><i class="turnBack" id="turnBackBtn2"></i><span class="register-title">照片上传</span>
+                            </nav>
+                        </div>
+
+                        <div class="carama-uploadUp">
+                            <span class="carama-upload-btn"> </span>
+
+                        </div>
+
+                    </div>
+                    <div class="btn-wraper btn2-wraper">
+                        <button class="next-button" id="btn2">下一步</button>
+                    </div>
+                </li>
+                <li class="everyPage liPeopleSelect">
+                    <div class="complete-wraper">
+                        <div class="register-wraper">
+                            <nav><i class="turnBack" id="turnBackBtn3"></i><span class="register-title">关键联系人</span>
+                            </nav>
+                        </div>
+                        <div class="import-friend-content">
+                            <div class="public-content register-name">
+                                <label for="contactName" class="public-content-left">联系人姓名</label><input type="text"
+                                                                                                          id="contactName"
+                                                                                                          placeholder="请输入联系人姓名"
+                                                                                                          class="public-content-right">
+                            </div>
+                            <div class="public-content">
+                                <label for="contactTell" class="public-content-left">联系人电话</label><input type="text"
+                                                                                                          id="contactTell"
+                                                                                                          placeholder="请输入联系人电话"
+                                                                                                          class="public-content-right">
+                            </div>
+                            <div class="public-content">
+                                <label for="contactArea" class="public-content-left">联系人住址</label><input type="text"
+                                                                                                          id="contactArea"
+                                                                                                          placeholder="请输入联系人住址"
+                                                                                                          class="public-content-right">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="complete-btn">
+                        <button class="next-button" id="completeBtn">完成</button>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="totast" style="display: none">
+        <div class="totast-container">
+            <p class="totast-container-title">您输入的信息不完整？</p>
+             <span class="totast-container-right">确定</span>
+        </div>
+    </div>
+    <div class="imgtotast" style="display: none">
+        <div class="totast-container">
+            <p class="totast-container-title">图片上传成功！</p>
+            <span class="totast-container-right imgTotastConfirm">确定</span>
+        </div>
+    </div>
+    <div class="imageUpLoad" style="display: none">
+        <div class="imageUpLoadWraper" style="display: block">
+            <div class="imageUpLoadWraperItemWraper " id="openCaramaAblum">
+                <input type="file" capture="camera" accept="image/*" name="logo" id="file"
+                       class="selectinput">
+                <span class="imageUpLoadWraperItem">打开相册</span>
+            </div>
+            <div class="imageUpLoadWraperItemWraper" id="openCarama">
+                <span class="imageUpLoadWraperItem">相机拍摄</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>
+</body>
+</html>

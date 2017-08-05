@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">
+        <link rel="stylesheet" type="text/css" href="../css/iuapmobile.um.listview.css">
+        <link rel="stylesheet" href="../css/detail.css">
+         <link rel="stylesheet" href="../css/share.css" type="text/css" />
+        <style>
+        	.listview-detail {
+        		overflow: hidden;
+        		text-overflow: ellipsis;
+        		display: -webkit-box;
+        		-webkit-line-clamp: 2;
+        		-webkit-box-orient: vertical;
+        	}
+			.um-header-light {
+				text-align: center;
+				background: #fff;
+				height: 44px;
+				box-sizing: border-box;
+				border-bottom: 1px solid #004287;
+			}
+			.turnBackNewsPage{
+				position: absolute;
+				width:50px;
+				height: 44px;
+				top: 0;
+				left: 0;
+				background: url("../img/shapeturnback.png") no-repeat center;
+				background-size: 13px;
+			}
+			h3{
+				color: #004287;
+			}
+        </style>
+	
+		<script src="../js/summer.js" ></script>		
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/mui.min.js" ></script>
+		<script src="../js/detail.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+        <script type="text/javascript" src="../js/knockout.js"></script>
+        <script type="text/javascript" src="../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../js/share.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			<div class="um-header-light">
+            	<a href="news.html" class="turnBackNewsPage"></a>
+            	<h3 ><div id="titles">要闻</div></h3>
+            	<div class="um-header-btns">
+            		<i class="ti-more" style="transform: rotate(90deg);" onclick="sharess()"></i>
+            	</div>
+            </div>
+
+			<div class="um-content">
+				<div class="um-listview-wrap" id="listview"style="height: 100%;">
+                    	<ul style="height: 100%;" class="um-list um-no-active" >
+                    		<li class="um-listview-row" style="height: 100%;width: 100%;overflow-y: auto;">
+                    			<div id="title"></div>
+                    			<div id="author">作者：张三</div>
+                    			<div id="data">2016-5-17 10:21</div>
+                    			<div id="content">原标题：林丹公开讨薪400万元，俱乐部董事长称也是受害者
+
+　　5月16日晚9点零1分，林丹在微博发表《关于粤羽俱乐部拖欠薪金的声明》，称其与队友共7人自2016年1月与广州粤羽俱乐部签约后参加2016至2017中国羽毛球俱乐部联赛，但时至今日，林丹与队友一直没有收到俱乐部应付的薪金。因此通过微博向广州市粤羽俱乐部以及俱乐部董事长高军、俱乐部常务副总经理付迅发布讨薪声明，称如果俱乐部不能及时解决欠薪问题，将通过法律手段维权。此后，广州粤羽俱乐部董事长高军表示，由于俱乐部的运营权已经交于付迅所在的公司，不仅林丹等七名队员被欠薪，俱乐部的教练团队以及作为董事长的他也被欠薪。高军表示将立即与付迅、相关赞助商联系，妥善解决欠薪一事。
+
+
+
+　　5月16日，就在本年度国际羽毛球的重要赛事——苏迪曼杯混合团体赛即将在澳大利亚举行之际，中国羽坛爆出了一个大新闻，作为两枚奥运金牌得主、当今中国羽毛球“一哥”的林丹竟然也被欠薪，并且要通过公开讨薪的方式维权。根据合约，林丹与粤羽俱乐部签订的薪水为400万元人民币。
+
+　　5月16日晚，林丹通过微博发表了与其他6名队员的联合声明，称粤羽俱乐部一再拖延支付薪水，长期沟通无效后，队员们对俱乐部的态度实在是失望和无奈，被迫公开讨薪。并称如果俱乐部不能立即支付所欠薪水，7名队员将动用法律手段。
+
+　　广州粤羽俱乐部董事长随后在接受媒体采访时表示，俱乐部欠薪的不止7名队员，还包括教练团队，甚至连他本人也被欠薪。高军表示，粤羽俱乐部的运营已经交给付迅所在的公司，他会火速赶往粤羽俱乐部所在的河源市，尽快解决欠薪一事。
+
+</div>
+                    		</li>
+                    	</ul>
+                    </div>
+			</div>
+
+			<div class="um-footer">
+				<div id="socialShare"></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+        $(function() {
+
+            $("#socialShare").socialShare({
+                content: '',
+				url:'',
+				titile:''
+            });
+
+        });
+
+    </script>

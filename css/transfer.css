@@ -1,0 +1,381 @@
+#container {
+    height: 100%;
+    width: 100%;
+}
+
+.easyMesg, .detailMesg ,.checkMesg{
+    width: 100%;
+}
+nav {
+    height: 1.173333rem;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.173333rem;
+    color: #004287;
+    position: relative;
+    border-bottom: 0.026667rem solid #004287;
+}
+
+.transfer-name {
+    border-bottom: 0.026667rem solid #ccc;
+    height: 1.333333rem;
+    padding-top: 0.266667rem;
+    position: relative;
+    line-height: 1.013333rem;
+}
+span{
+    display: inline-block;
+    height: 100%;
+}
+.easyMesg-content, .detailMesg-content,.checkMesg-content {
+    padding-left: 0.4rem;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+}
+
+.easyMesg span {
+    font-size: 15px;
+}
+
+.transfer-acount {
+    height: 1.333333rem;
+    padding-top: 0.266667rem;
+    line-height: 1.013333rem;
+
+}
+
+.easyMesg input {
+    border: none;
+    outline: none;
+    height: 0.453333rem;
+    font-size: 14px;
+    text-align: left;
+    width: 65%;
+    float: right;
+    margin-right: 40px;
+ height: 100%;
+}
+input::-webkit-input-placeholder {
+    color: #CCC !important;
+}
+.clickBtn {
+    width: 100%;
+    margin-top: 1.333333rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+/*    position: absolute;
+    bottom: 0;
+    left: 0;*/
+}
+textarea::placeholder{
+    color: #CCC;
+}
+.easgClickBtn {
+    margin-top: 1.333333rem;
+    width: 100%;
+    padding: 0 0.4rem;
+}
+.easgClickBtnOperation{
+    border-radius: 0.133333rem;
+}
+.easyMesgBtn, .detailMesgBtn,.checkMesgBtn {
+    height: 1.333333rem;
+    width: 100%;
+    background-color: #D3D3D3;
+    color: #fff;
+    font-size: 17px;
+    border: 0.026667rem solid #D3D3D3;
+    box-sizing: border-box;
+    border-radius: 0.133333rem;
+}
+
+.friendList,.modeList {
+    position: absolute;
+    top: 0;
+    right: 0.133333rem;
+    width: 0.8rem;
+    height: 100%;
+    text-align: center;
+    line-height: 1.333333rem;
+}
+i.friendList {
+    background: url(../img/userfriend.png) no-repeat center;
+    background-size: 0.533333rem 0.533333rem;
+}
+.modeList::before {
+    content: "";
+    width: 0.32rem;
+    height: 0.32rem;
+    border-top: 0.053333rem solid #999;
+    border-right: 0.053333rem solid #999;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.transferDetail-name, .transferDetail-acount, .transferDetail-bank, .transfer-mode, .transfer-count,.transfercheck-name,.transferCheck-acount,.transferCheck-bank,.check-transfer-mode,.transfer-count,.check-transfer-usemesg{
+    height: 1.333333rem;
+    font-size: 15px;
+    border-bottom: 0.026667rem solid #ccc;
+    width: 100%;
+    line-height: 1.333333rem;
+}
+.transfer-usemesg{
+    font-size: 15px;
+    border-bottom: 0.026667rem solid #ccc;
+    width: 100%;
+    line-height: 1.333333rem;
+    padding-right: 0.4rem;
+}
+.transfer-usemesg,.check-transfer-usemesg {
+    border-bottom: none;
+}
+
+.transfer-detail-name, .transferDetail-acount-name, .mode-bank, .mode-mesg, .mobey-count {
+    padding-left: 0.4rem;
+    font-size: 14px;
+}
+a.selectModeContainerUlLiItem {
+    color: #004287;
+}
+ textarea.user-mesg {
+    font-size: 14px;
+    width: 100%;
+    height: 2.133333rem;
+    display: block;
+    padding-top: 0.133333rem;
+    resize: none;
+    border: none;
+    outline: none;
+}
+textarea::-webkit-textarea-placeholder{
+    color: #CCC !important;
+}
+input {
+    border: none;
+    outline: none;
+}
+.label-color{
+    color: #666;
+}
+nav>span, .easyMesg nav span {
+    font-size: 17px;
+    font-weight: 600;
+}
+.label-padding{
+    padding-left: 0.853333rem;
+}
+span.mode-mesg{
+    margin-right: 1.066667rem;
+    height: 100%;
+    width: 1.333333rem;
+    text-align: right;
+}
+.transfer-mode{
+    position: relative;
+}
+.modeList{
+    top: 0;
+    width: 1.066667rem;
+}
+.check-transfer-user-mesg,.check-money-count,.check-money-bank,.check-mode-mesg{
+    display: inline-block;
+    margin-left: 15px;
+}
+.timeBtn-check{
+    margin-top: 0.533333rem;
+    background-color: #fff;
+    height: 1.333333rem;
+    padding-left: 0.4rem;
+}
+.easyMesg-timeBtn{
+    height: 0.8rem;
+    width: 40%;
+    padding-left: 0.4rem;
+    margin-top: 0.266667rem;
+    border: none;
+    outline: none;
+}
+.timeBtn{
+    height: 0.8rem;
+    margin-left: 1.333333rem;
+    width: 40%;
+    background-color: #4990E2;
+    color: #fff;
+    border-radius: 0.08rem;
+    margin-top: 0.266667rem;
+    border: 0.026667rem solid #4990E2;
+}
+.endmesg-detail{
+padding-left: 25%;
+margin: 0 auto;
+position: relative;
+}
+.endmesg-detail-top {
+    font-size: 15px;
+    line-height: 1.066667rem;
+    color: #333;
+}
+i.transfer-complete-img-wraper {
+    display: block;
+    width: 1.066667rem;
+    height: 1.066667rem;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    background: url(../img/complete.png) no-repeat center;
+    z-index: 2;
+}
+.endmesg-detail-bottom{
+    color: #888;
+    font-size: 14px;
+    height: 2.133333rem;
+}
+.endmesg-detail-bottom-item {
+    box-sizing: border-box;
+    color: #666;
+    height: 0.666667rem;
+}
+.endMesg {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+.endMesg-container {
+    width: 100%;
+    padding-top: 1.866667rem;
+}
+span.turnBackFirstPage {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    right: 0.4rem;
+    position: absolute;
+    top: 0;
+}
+span.endmesg-detail-right {
+    text-align: right;
+    display: inline-block;
+    float: right;
+}
+.shareBtn{
+    margin-top: 1.333333rem;
+}
+.share-wechat, .share-mesg {
+    width: 49%;
+    box-sizing: border-box;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+}
+.endmesg-detail-bottom>span{
+    display: block;
+}
+.share-wechat {
+    background-color: #62B900;
+    border: 0.026667rem solid #62B900;
+    border-radius: 0.08rem;
+}
+.shareBtnWraper {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.share-mesg {
+    background-color: #004287;
+    border: 0.026667rem solid #004287;
+    border-radius: 0.08rem;
+}
+.um-check-group{
+    margin-top: 0.8rem;
+}
+
+.turnback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.066667rem;
+    height: 100%;
+    text-align: center;
+        background: url(../img/shapeturnback.png) no-repeat center;
+    background-size: 0.32rem;
+}
+.um-check-group {
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0px 0px;
+    color: #007aff;
+    font-size: 15px;
+    padding-left: 0.4rem;
+    background-color: #fff;
+}
+.um-check-group>label:last-child{
+    border-bottom: none;
+}
+/*.turnback:before{
+    content: "";
+    width: 0.32rem;
+    height: 0.32rem;
+    border-left: 0.053333rem solid #004287;
+    border-bottom: 0.053333rem solid #004287;
+    -webkit-transform:rotate(45deg);
+    transform: rotate(45deg);
+    display: inline-block;
+}*/
+.um-check-group-item{
+    border-bottom: 0.026667rem solid #ccc;
+    font-size: 15px;
+    padding-left:0;
+}
+.um-check-group-item:first-child, .um-check-group-item:last-child{
+        -webkit-border-image: none;
+    border-image: none;
+    border-width: 0px 0 0 0;
+    border-bottom: 0.026667rem solid #ccc;
+}
+.modecontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+}
+.selectModeContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+}
+.selectModeContainerUl{
+    height: 100%;
+    width: 100%;
+}
+.selectModeContainerUlLi{
+    height: 1.6rem;
+    border-bottom: 0.026667rem solid #ccc;
+    box-sizing: border-box;
+}
+.selectModeContainerUlLi:last-child{
+    border-bottom: none;
+}
+.selectModeContainerUlLiItem{
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 1.6rem;
+    font-size: 15px;
+}
+.selectModeContainerUlLiItem:active{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+}

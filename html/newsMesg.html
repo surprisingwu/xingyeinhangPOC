@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/iuapmobile.um.css">
+    <link rel="stylesheet" href="../css/pullToRefresh.css">
+    <script src="../js/summer.js" ></script>
+    <script src="../js/jquery.min.js" ></script>
+    <script src="../js/adaptive.js"></script>
+    <script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+    <script type="text/javascript" src="../js/knockout.js"></script>
+    <script type="text/javascript" src="../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script src="../js/appsettings.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/pullToRefresh.js"></script>
+    <script src="../js/newsMesg.js"></script>
+    <style>
+        header{
+         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 99;
+        }
+        .head {
+    height: 1.173333rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 0.026667rem solid #004287;
+    position: relative;
+    line-height: 1.173333rem;
+    text-align: center;
+}
+span.turnBackToFirstPage {
+    position: absolute;
+    width: 1.333333rem;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(../img/shapeturnback.png) no-repeat center;
+    background-size: 0.346667rem;
+}
+h3.newMesgTitle {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    color: #004287;
+}
+li.navItem {
+    float: left;
+    width: 25%;
+    text-align: center;
+    height: 1.173333rem;
+    line-height: 1.173333rem;
+    border-bottom: 0.026667rem solid #ccc;
+        padding-left: 0.186667rem;
+    padding-right: 0.186667rem;
+}
+.navItemActive{
+    color: #004287;  
+    border-bottom: 0.053333rem solid #004287;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse; 
+}
+div#listview1 {
+    position: absolute;
+    top: 2.346667rem;
+    left: 0;
+    overflow: auto;
+}
+li.listItem {
+    height: 2.666667rem;
+    width: 100%;
+    display: flex;
+    padding-left: 0.4rem;
+    padding-top: 0.32rem;
+    /* padding-bottom: 9px; */
+    background: #fff;
+}
+.imgWraper {
+    width: 2.986667rem;
+    height: 1.973333rem;
+}
+.listContent {
+    padding-right: 0.4rem;
+    flex: 1;
+    margin-left: 0.266667rem;
+    border-bottom: 0.026667rem solid #ccc;
+    height: 100%;
+}
+span.listContentTitle {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+span.listContentMain {
+    display: block;
+    height: 1.013333rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #666;
+    width: 100%;
+}
+span.listContentComment {
+    display: block;
+    float: right;
+    color: #007aff;
+}
+    </style>
+
+</head>
+<body>
+<header>
+    <div class="head">
+        <span class="turnBackToFirstPage"></span>
+        <h3 class="newMesgTitle">新闻列表</h3>
+    </div>
+    <nav class="newsMesgNav">
+        <ul class="navWraper">
+            <li class="navItem " id="1"><span class="navItemActive">运动</span></li>
+            <li class="navItem" id="2"><span>生活</span></li>
+            <li class="navItem" id="3"><span>新闻</span></li>
+            <li class="navItem" id="4"><span>娱乐</span></li>
+        </ul>
+    </nav>
+</header>
+<div id="listview">
+    <ul class="listWraper">
+        <li class="listItem">
+            <div class="imgWraper">
+                <img src="" width=100% height=100%>
+            </div>
+            <div class="listContent">
+                <span class="listContentTitle">我是我的家</span>
+                <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+                <span class="listContentComment">23333  跟帖</span>
+            </div>
+        </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li><li class="listItem">
+        <div class="imgWraper">
+            <img src="" width=100% height=100%>
+        </div>
+        <div class="listContent">
+            <span class="listContentTitle">我是我的家</span>
+            <span class="listContentMain">气温将达发货方哈利发阿婆分哈哈发分哈珀分哈飞和安静啊放假啊接就会发火就发货方</span>
+            <span class="listContentComment">23333  跟帖</span>
+        </div>
+    </li>
+    </ul>
+</div>
+</body>
+</html>

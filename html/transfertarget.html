@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/iuapmobile.um.css">
+    <link rel="stylesheet" href="../css/font-icons.css">
+    <link rel="stylesheet" href="../css/transfer.css">
+    <script src="../js/summer.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/Frameworks/iuapmobile.frameworks.ui.js"></script>
+    <script src="../js/adaptive.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/transer.js"></script>
+</head>
+<body>
+<div id="container">
+    <div class="easyMesg" v-show="easyMesg">
+        <nav><i class="turnback" @click="turnBackIndex"></i><span>转账</span></nav>
+        <div class="easyMesg-content">
+            <div class="transfer-name">
+                <span>收款人</span>
+                <input type="text" placeholder="请输入收款人姓名" v-model="transferName" @keyup="changeColor">
+                <i class="friendList" @click="showSelectFriendList"></i>
+            </div>
+            <div class="transfer-acount">
+                <span>收款帐号</span>
+                <input type="number" placeholder="请输入收款人银行卡号" v-model="transferAccount" @keyup="changeColor">
+            </div>
+        </div>
+        <div class="easgClickBtn">
+            <button class="easyMesgBtn easgClickBtnOperation" @click="easyMesgHandler" ref="changebtncolor">下一步</button>
+        </div>
+
+    </div>
+    <div class="detailMesg" v-show="detailMesg">
+        <nav><i class="turnback" @click="turnBackToTransfer"></i><span>转账明细</span></nav>
+        <div class="detailMesg-content">
+            <div class="transferDetail-name">
+                <span class=" label-color">收款人</span>
+                <span class="transfer-detail-name label-padding">{{transferName}}</span>
+            </div>
+            <div class="transferDetail-acount">
+                <span class="label-color">收款帐号</span>
+                <span class="transferDetail-acount-name">{{transferAccount}}</span>
+            </div>
+            <div class="transferDetail-bank">
+                <span class="label-color">收款银行</span>
+                <input type="text" placeholder="请输入收款银行" @keyup="changeDetailBtnColor" class="mode-bank" v-model="getMoneyBank">
+            </div>
+            <div class="transfer-mode">
+                <span class="label-color">转账模式</span>
+                <span class="mode-mesg">{{modeMesg}}</span>
+                <i class="modeList" @click="selectMode"></i>
+            </div>
+            <div class="transfer-count">
+                <span class="label-color">转账金额</span>
+                <input type="number" class="mobey-count" @keyup="changeDetailBtnColor" v-model="moneyCount" placeholder="请输入转账金额">
+                <i class="moneyDelete" @click="deleteVal"></i>
+            </div>
+            <div class="transfer-usemesg">
+                <span class="label-color">转账用途</span>
+                <textarea placeholder="转请输入账用途" v-model="transferUserMesg" @keyup="changeDetailBtnColor" class="user-mesg"></textarea>
+            </div>
+        </div>
+        <div class="clickBtn">
+            <button class="detailMesgBtn" @click="detailMesgHandler" ref="detailMesgBtn">下一步</button>
+        </div>
+    </div>
+    <div class="checkMesg" v-show="checkMesg">
+        <nav><i class="turnback" @click="turnBackToTransferDetail"></i><span>转账申请确认</span></nav>
+        <div class="checkMesg-content">
+            <div class="transfercheck-name">
+                <span>收款人</span>
+                <span class="transfer-detail-name label-padding">{{transferName}}</span>
+            </div>
+            <div class="transferCheck-acount">
+                <span>收款帐号</span>
+                <span class="transferDetail-acount-name">{{transferAccount}}</span>
+            </div>
+            <div class="transferCheck-bank">
+                <span>收款银行</span>
+                <span class="check-money-bank">{{getMoneyBank}}</span>
+            </div>
+            <div class="check-transfer-mode">
+                <span>转账模式</span>
+                <span class="check-mode-mesg">{{modeMesg}}</span>
+            </div>
+            <div class="transfer-count">
+                <span>转账金额</span>
+                <span class="check-money-count">{{moneyCount}}</span>
+            </div>
+            <div class="check-transfer-usemesg">
+                <span>转账用途</span>
+                <span class="check-transfer-user-mesg">{{transferUserMesg}}</span>
+            </div>
+
+        </div>
+        <div class="timeBtn-check">
+            <input type="text" class="easyMesg-timeBtn" @keyup="timeBtncheckmesg" v-model="timeBtnMesg" placeholder="请输入短信验证码"><timer-btn ref="timerbtn" :second="second"  class="timeBtn" v-on:run="sendCode" ></timer-btn>
+        </div>
+        <div class="clickBtn">
+            <button class="checkMesgBtn" @click="checkMesgHandler" ref="checkMesgBtn">确认</button>
+        </div>
+    </div>
+    <div class="endMesg" v-show="endMes">
+        <nav><i class="turnback" @click="turnBackToCheck"></i><span>转账完成</span> <span @click="restartMesg" class="turnBackFirstPage">返回首页</span></nav>
+        <div class="endMesg-container">
+            <div class="endmesg-detail">
+                <div class="endmesg-detail-top">
+                    <i class="transfer-complete-img-wraper"></i>
+                    <span class="common-text transfer-complete-mesg">转账成功，等待银行受理...</span>
+                </div>
+                <div class="endmesg-detail-bottom">
+                   <div class="endmesg-detail-bottom-item">
+                       <span class="endmesg-detail-left common-text">受理单号： 29809900</span><span class="endmesg-detail-right"></span>
+                   </div>
+                    <div class="endmesg-detail-bottom-item">
+                        <span class="endmesg-detail-left common-text">收款户名：{{transferName}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="shareBtn">
+                <div class="shareBtnWraper">
+                    <button class="share-wechat" @click="shareWechat">分享给微信好友</button>
+                    <button class="share-mesg" @click="shareMesgfriend">短信通知好友</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modecontainer" v-show="modeselect">
+       <div class="selectModeContainer">
+
+           <ul class="selectModeContainerUl">
+               <li class="selectModeContainerUlLi" @click="selectModeContainerUlLiHandler"><a href="javascript:void(0);" class="selectModeContainerUlLiItem">实时</a></li>
+               <li class="selectModeContainerUlLi" @click="selectModeContainerUlLiHandler"><a href="javascript:void(0);" class="selectModeContainerUlLiItem">普通</a></li>
+               <li class="selectModeContainerUlLi" @click="selectModeContainerUlLiHandler"><a href="javascript:void(0);" class="selectModeContainerUlLiItem">次日</a></li>
+           </ul>
+       </div>
+    </div>
+    <div class="friendselectList" v-show="friendselectList">
+        <nav><span>最近联系人</span><i class="turnback" @click="turnBackEasyMesg"></i></nav>
+        <div class="um-check-group">
+            <label v-for="(item,index) in items" class="um-check-group-item list-item-1" @click="listitem(item)" >
+                <input name="um-radio"  type="radio" value="">
+                <span class="um-icon-check um-css3-vc"></span>
+                <span class="um-black">{{item.name}}</span>
+            </label>
+        </div>
+    </div>
+</div>
+</body>
+</html>

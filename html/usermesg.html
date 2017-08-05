@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">	
+		<script src="../js/summer.js" ></script>		
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../js/adaptive.js"></script>
+		<script src="../js/cvi_busy_lib.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/appsettings.js"></script>
+		<script src="../js/usermesg.js"></script>
+		<style>
+			header {
+    height: 1.173333rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1.173333rem;
+    box-sizing: border-box;
+    border-bottom: 0.026667rem solid #004287;
+    background: #fff;
+    position: relative;
+}
+body{
+	background: #fff;
+}
+span.turnBackMainPage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.333333rem;
+    height: 100%;
+    display: inline-block;
+    background: url(../img/shapeturnback.png) no-repeat center;
+    background-size: 0.346667rem;
+}
+h3.userPageTitle {
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+    color: #004287;
+}
+.mainContainer {
+    padding-top: 1.333333rem;
+    box-sizing: border-box;
+    border-bottom: 0.026667rem solid rgba(0,0,0,.3);
+    /* clear: both; */
+    height: 4.8rem;
+    display: flex;
+    background: #fff;
+}
+.mainContainerLeft {
+    width: 2.666667rem;
+    height: 2.666667rem;
+    margin-left: 0.8rem;
+    /* float: left; */
+    flex: 0 0 2.666667rem;
+    /* border-radius: 50%; */
+    margin-right: 0.533333rem;
+    border-radius: 50%;
+}
+.mainContainerRight {
+    height: 2.666667rem;
+    /* margin-top: 50px; */
+    font-size: 15px;
+    /* text-align: center; */
+    padding-top: 0.533333rem;
+}
+.userName,.userLastTime{
+	display: block;
+	height: 0.746666667rem;
+}
+.exitBtnContainer {
+    padding: 0 0.4rem;
+    height: 1.333333rem;
+    margin-top: 1.333333rem;
+}
+button.exitBtn {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    border: none;
+    outline: none;
+    border-radius: 0.133333rem;
+    font-size: 17px;
+}
+.totastContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.4);
+    top: 0;
+    left: 0;
+}
+.totastWraper {
+    width: 70%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 0.133333rem;
+}
+.titleContainer {
+    text-align: center;
+    padding-top: 0.266667rem;
+}
+h3 {
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+}
+.totastFont {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 0.266667rem;
+}
+.btnWraper {
+    width: 100%;
+    margin-top: 0.266667rem;
+    display: flex;
+}
+button.cancelBtn {
+    /* border: honeydew; */
+    border: none;
+    outline: none;
+    /* display: inline-block; */
+    width: 50%;
+    height: 1.066667rem;
+    background: #fff;
+    box-sizing: border-box;
+    border-top: 0.026667rem solid #ccc;
+    border-right: 0.026667rem solid #ccc;
+    color: #004287;
+}
+button.confirmBtn {
+    display: inline-block;
+    width: 50%;
+    height: 1.066667rem;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-top: 0.026667rem solid #ccc;
+   color: #004287;
+}
+			.mainContainerLeft img {
+				border-radius: 50%;
+			}
+		</style>
+		
+	</head>
+	<body >
+	<div id="app">
+
+
+		<header>
+			<span class="turnBackMainPage"></span>
+			<h3 class="userPageTitle">个人中心</h3>
+		</header>
+
+	<div class="mainContainer">
+		<div class="mainContainerLeft"><img  src="" width=100% height=100% alt=""></div>
+		<div class="mainContainerRight">
+			<span class="userName"></span>
+			<span class="userLastTime"></span>
+		</div>
+	</div>
+	<div class="exitBtnContainer">
+		<button class="exitBtn" >
+			安全退出
+		</button>
+	</div>
+	<div class="totastContainer" style="display: none">
+		<div class="totastWraper">
+			<div class="titleContainer">
+				<h3>确认</h3>
+			</div>
+			<div class="totastFont">
+				<span class="fontContainer">
+					请确认是否退出当前登录帐号
+				</span>
+			</div>
+			<div class="btnWraper">
+				<button class="cancelBtn" >取消</button>
+				<button class="confirmBtn" >确定</button>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	</body>
+</html>

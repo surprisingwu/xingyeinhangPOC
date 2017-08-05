@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .um-content {
+            background: #256FEA;
+        }
+
+        .login {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            padding: 6%;
+        }
+
+        .login button.um-btn {
+            border-radius: 3px;
+            padding: 5px 12px;
+            border-color: #009BF5;
+            background: #009BF5;
+        }
+
+        .login p.title {
+            color: #00B3ED;
+        }
+
+        .login p.user {
+            color: #848484;
+        }
+
+        input.form-control {
+            border: none;
+            border-bottom: 1px solid #e3e3e5;
+            padding-left: 0px;
+            font-size: 13px;
+        }
+
+        input.form-control:focus {
+            box-shadow: none;
+        }
+
+        .login .um-input-clear {
+            color: #fff;
+            background-color: #ddd;
+            padding: 4px;
+        }
+
+        .form-control:focus + .um-input-clear {
+            color: #fff;
+        }
+
+        .um-input-clear.ti-eye.eye {
+            color: #256FEA;
+        }
+        button#registerBtn {
+            font-weight: bold;
+            color: #004287;
+            font-size: 18px;
+            width: 8.933333rem;
+            height: 1.333333rem;
+            border: none;
+            outline: none;
+            margin-top: 0.266667rem;
+            margin: 0.266667rem auto;
+            display: block;
+            background-color: rgb(249,249,249);
+        }
+        #login {
+            background-color: #004287;
+            box-shadow: 0 0.106667rem 0.213333rem 0 #004287;
+            border-color: #004287;
+            display: block;
+            width: 8.933333rem;
+            height: 1.333333rem;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 auto;
+            border-radius: 2.666667rem;
+            color: #EEE;
+            border-bottom: none;
+            border-right: none;
+        }
+        .um-content {
+            background: rgb(249,249,249);
+        }
+        .um-win{
+            background-color: rgb(249,249,249);
+        }
+        .imgWraper {
+            position: relative;
+            width: 100%;
+            height: 105px;
+            background-color: rgb(249,249,249);
+            text-align: center;
+            top: 1.333333rem;
+        }
+        span.imgcontainer {
+            display: inline-block;
+            width: 3.28rem;
+            height: 2.24rem;
+            background: url(img/xingye.png) no-repeat center;
+            background-size: contain;
+        }
+        .um-page{
+            background-color: rgb(249,249,249);
+        }
+        .btn-wraper {
+            margin-top: 2.666667rem;
+        }
+        .main {
+            margin-top: 2.4rem;
+            height: 3.2rem;
+            padding-left: 0.4rem;
+            background-color: #fff;
+        }
+        .main-item {
+            height: 1.6rem;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 0.026667rem solid #ccc;
+            position: relative;
+        }
+        .main-item:last-child{
+            border-bottom: none;
+        }
+        span.turnBackToIndex {
+            width: 1.333333rem;
+            height: 1.1733333rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+            background: url(img/close1.png) no-repeat center;
+            background-size: 0.346667rem;
+        }
+        .public-btn {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding-left: 0.933333rem;
+            font-size: 15px;
+        }
+        .public-left{
+            display: block;
+            width: 0.8rem;
+            height: 1.546667rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .public-right{
+            display: block;
+            width: 1.066667rem;
+            height: 1.546667rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .userIng{
+            background: url("img/user.png") no-repeat center;
+            background-size: 0.58666667rem;
+        }
+.pwdImg {
+    background: url(img/pwd.jpg) no-repeat 0.08rem center;
+    background-size: 0.8rem;
+}
+        .user-delete{
+            background: url("img/delete.png") no-repeat center;
+            background-size: 0.586667rem;
+        }
+        .user-eye{
+            background: url("img/ere.png") no-repeat center;
+            background-size: 0.666667rem;
+        }
+        input::-webkit-input-placeholder {
+            color: #CCC !important;
+        }
+        .cha1,.cha2{
+        width: 0.453333rem;
+        height: 0.053333rem;
+        display: inline-block;
+        border-top: 0.053333rem solid rgba(0,0,0,.5);
+            position: absolute;
+    top: 50%;
+    margin-top: -0.026667rem;
+   
+    left: 0.4rem;
+        }
+        .cha1{
+-webkit-transform: rotate(45deg);
+ transform: rotate(45deg);
+        }
+        .cha2{
+             transform: rotate(-45deg);
+             -webkit-transform:rotate(-45deg);
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/font-icons.css">
+    <link rel="stylesheet" href="css/iuapmobile.um.css">
+    <script src="js/summer.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/Frameworks/iuapmobile.frameworks.ui.js"></script>
+    <script src="js/adaptive.js"></script>
+    <script src="js/appsettings.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="um-win" id="index">
+    <span class="turnBackToIndex" onclick="functionback()">
+    <i class="cha1"></i>
+    <i class="cha2"></i>
+    </span>
+    <div class="imgWraper"><span class="imgcontainer"></span></div>
+    <div class="main">
+        <div class="main-item">
+            <input type="text" class="userBtn public-btn" placeholder="请输入用户名">
+            <span class="userIng public-left"></span>
+            <span class="user-delete public-right"></span>
+        </div>
+        <div class="main-item">
+            <input type="password" class="pwdBtn public-btn" placeholder="请输入密码">
+            <span class="pwdImg public-left"></span>
+            <span class="user-eye public-right"></span>
+        </div>
+    </div>
+    <div class="btn-wraper">
+        <button  id="login" >登 录</button>
+        <button  id="registerBtn" >新用户注 册</button>
+    </div>
+</div>
+</div>
+</body>
+</html>
